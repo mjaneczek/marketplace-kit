@@ -2,59 +2,59 @@ module MarketplaceKit
   module Services
     class Logger
       def deploy_started
-        puts 'Deploy command started'.green
+        puts 'Deploy command started'
       end
 
       def compressing_folder
-        puts 'Compressing marketplace_builder folder'.yellow
+        puts 'Compressing marketplace_builder folder'
       end
 
       def sending_zip
-        puts 'Sending zip file to the server'.yellow
+        puts 'Sending zip file to the server'
       end
 
       def wait_for_deploy_finish
-        puts 'Waiting for deploy to finish'.yellow
+        puts 'Waiting for deploy to finish'
       end
 
       def deploy_succeeded
-        puts 'Deploy command succeded'.green
+        puts 'Deploy command succeded'
       end
 
       def pull_started
-        puts 'Pull command started'.green
+        puts 'Pull command started'
       end
 
       def request_backup
-        puts 'Requesting system backup...'.yellow
+        puts 'Requesting system backup...'
       end
 
       def wait_for_backup_finish
-        puts 'Waiting for backup to finish'.yellow
+        puts 'Waiting for backup to finish'
       end
 
       def pull_succeeded
-        puts 'Pull command succeded'.green
+        puts 'Pull command succeded'
       end
 
       def sync_command_started
-        puts 'Sync mode enabled'.green
+        puts 'Sync mode enabled'
       end
 
       def sync_updating(file_path)
-        puts "Updating: #{file_path}".green
+        puts "Updating: #{file_path}"
       end
 
       def ask_for_email
-        puts 'Enter your email:'.yellow
+        puts 'Enter your email:'
       end
 
       def ask_for_password
-        puts 'Enter your password:'.yellow
+        puts 'Enter your password:'
       end
 
       def redirect_tip
-        puts 'Server returned redirect code (possible a wrong domain in config file?)'.yellow
+        puts 'Server returned redirect code (possible a wrong domain in config file?)'
       end
 
       def version(version)
@@ -69,24 +69,20 @@ module MarketplaceKit
       end
 
       def json_error(source)
-        puts '```'.red
-        puts 'Error while parsing JSON'.red
+        puts 'Error while parsing JSON'
         puts "Raw body:\n#{source}"
-        puts '```'.red
       end
 
       def api_error(message, details)
-        puts '```'.red
-        puts "Builder error: #{message}".red
+        puts "Builder error: #{message}"
         puts 'Details:' if details
         puts details
-        puts '```'.red
       end
 
       def standard_error(error)
-        puts '```'.red
-        puts "Error: #{error.message} (#{error.class})".red
-        puts '```'.red
+        puts '```'
+        puts "Error: #{error.message} (#{error.class})"
+        puts '```'
       end
     end
   end
